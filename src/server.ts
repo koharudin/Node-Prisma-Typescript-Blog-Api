@@ -10,6 +10,10 @@ const port = 8080;
 async function main() {
   app.use(express.json());
 
+  app.get("/",(req,res)=>{
+    res.json({"message":"backend"});
+  });
+
   // Register API routes
   app.use("/api/v1/post", PostRouter);
 
